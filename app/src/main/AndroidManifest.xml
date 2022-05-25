@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myshopdaily">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@id/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activites.ShopDetailsActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activites.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.OrderDetailsSellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.ShopReviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.WriteReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.OrderDetailsUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.EditProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.ProfileEditSellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.ProfileEditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.MainUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.MainSellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.ForgetPasswordActivity"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".activites.RegisterUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.RegisterSellerActivity"
+            android:exported="false" />
+        <activity android:name=".activites.LoginActivity" />
+        <activity
+            android:name=".activites.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- register service to allow to run in background -->
+        <service
+            android:name=".MyFirebaseMessaging"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
